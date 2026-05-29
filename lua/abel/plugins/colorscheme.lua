@@ -20,7 +20,8 @@ return {
   config = function()
      vim.g.gruvbox_material_background = "hard"
      vim.g.gruvbox_material_better_performance = 1
-    vim.cmd([[colorscheme gruvbox-material]])
+     vim.g.gruvbox_material_transparent_background = 2 -- 0, 1 (only background), 2 (background and status line, etc.)
+     vim.cmd([[colorscheme gruvbox-material]])
 	end,
 
 }
