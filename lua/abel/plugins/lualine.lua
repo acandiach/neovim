@@ -30,7 +30,7 @@ return {
 			lualine_b = { "branch", "diff", "diagnostics" },
 			lualine_c = { "filename" },
 			lualine_x = {--[['encoding']]
-				"fileformat",
+        "fileformat",
 				"filetype",
 			},
 			lualine_y = { "progress" },

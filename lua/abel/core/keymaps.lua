@@ -1,11 +1,14 @@
 vim.g.mapleader = " "
 local map = vim.keymap.set
 
+-- Open commands helper
+map("n", "<leader>hh", "<cmd>FloatFile ~/.config/nvim/lua/abel/core/helper_commands.lua<cr>")
+
 -- Basic Configuration
 map("i", "jk", "<Esc><Esc>")
 map("n", "<leader>q", "<cmd>q<cr>")
 map("n", "<leader>w", "<cmd>w<cr>")
-map("n", "<leader>rr", "<cmd>source %<cr>")
+-- map("n", "<leader>rr", "<cmd>source %<cr>")
 
 -- File Browser
 map("n", "<leader>e", "<cmd>Explore<cr>")

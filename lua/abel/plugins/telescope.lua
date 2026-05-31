@@ -32,8 +32,11 @@ return {
   end,
   defaults = {
     layout_config = {
+      width = 0.95,
+      height = 0.90,
+
       horizontal = {
-        preview_cutoff = 1,
+        preview_width = 0.60,
       },
     },
   },
