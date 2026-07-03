@@ -8,6 +8,9 @@
 -- File Browser
     "<Space>e", desc = "open file explore"
 
+-- Run current file
+    "<Space><Space>r", desc = "RunCurrentFile"
+
 -- To Navigate between buffer and close buffer
     "<Space>bn", desc = "go to next buffer"
     "<Space>bp", desc = "go to previous buffer"

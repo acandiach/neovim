@@ -63,6 +63,45 @@ map('n', 'N', 'Nzzzv', { desc = "Goes to the prev result on the seach and put th
 map("n", "<leader>j", "10j")
 map("n", "<leader>k", "10k")
 
+-- Runner current file
+local runners = {
+  python = "python3 %",
+  javascript = "node %",
+  typescript = "bun %",
+  sh = "bash %",
+  lua = "lua %",
+  rust = "cargo run",
+  c = "gcc % -o /tmp/nvim_run && /tmp/nvim_run",
+  cpp = "g++ % -std=c++20 -o /tmp/nvim_run && /tmp/nvim_run",
+  java = "javac % && java %:r",
+}
+
+function RunCurrentFile()
+  local ft = vim.bo.filetype
+  local cmd = runners[ft]
+
+  if not cmd then
+    vim.notify("No hay runner para: " .. ft)
+    return
+  end
+
+  vim.cmd("belowright 15split")
+  vim.cmd("terminal " .. cmd)
+
+  -- Entrar al terminal
+  vim.cmd("startinsert")
+
+  -- q para cerrar la ventana del terminal
+  vim.keymap.set("n", "q", "<cmd>close<CR>", {
+    buffer = 0,
+    silent = true,
+  })
+end
+
+vim.keymap.set("n", "<leader><leader>r", RunCurrentFile, {
+  desc = "Run current file",
+})
+
 -- For multicursor
 
 --Basic usage
