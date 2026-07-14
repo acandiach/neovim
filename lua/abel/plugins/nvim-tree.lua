@@ -50,13 +50,13 @@ return {
       },
     })
 
-    vim.cmd([[
-      hi  NvimTreeFolderIcon guifg=#81a1c1
-      hi  NvimTreeOpenedFolderIcon guifg=#88ccbb
-      hi  NvimTreeExecFile guifg=#a3be8c
-      hi  NvimTreeImageFile guifg=#b48ead
-      hi  NvimTreeOpenedFile guifg=#8fbcbb gui=italic
-    ]])
+    -- vim.cmd([[
+    --   hi  NvimTreeFolderIcon guifg=#81a1c1
+    --   hi  NvimTreeOpenedFolderIcon guifg=#88ccbb
+    --   hi  NvimTreeExecFile guifg=#a3be8c
+    --   hi  NvimTreeImageFile guifg=#b48ead
+    --   hi  NvimTreeOpenedFile guifg=#8fbcbb gui=italic
+    -- ]])
 
     -- set keymaps
     local keymap = vim.keymap -- for conciseness
