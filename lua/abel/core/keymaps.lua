@@ -11,12 +11,12 @@ map("n", "<leader>w", "<cmd>w<cr>")
 -- map("n", "<leader>rr", "<cmd>source %<cr>")
 
 -- File Browser
-map("n", "<leader>e", "<cmd>Explore<cr>")
+-- map("n", "<leader>e", "<cmd>Explore<cr>")
 
 -- To Navigate between buffer and close buffer
-map("n", "<leader>bn", "<cmd>bn<cr>")
-map("n", "<leader>bp", "<cmd>bp<cr>")
-map("n", "<leader>bd", "<cmd>bd<cr>")
+map("n", "<leader>bn", "<cmd>bn<cr>", {desc = "Buffer Next"})
+map("n", "<leader>bp", "<cmd>bp<cr>", {desc = "Buffer Previous"})
+map("n", "<leader>bd", "<cmd>bd<cr>", {desc = "Buffer Delete"})
 
 -- mantiene el texto resaltado en el centro del editor
 map('n', 'n', 'nzzzv', { desc = "Goes to the next result on the seach and put the cursor in the middle"})
