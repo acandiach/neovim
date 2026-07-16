@@ -1,4 +1,4 @@
--- KEYMAPS HELPERS
+-- KEYMAPS HELP
 
 -- Basic Configuration
     "<jk>", desc = "escape mode insert"
@@ -31,8 +31,8 @@
 -- Resize windows with arrows keys
     "<right>", desc = "vertical resize -5"
     "<left>", desc = "vertical resize +5"
-    "<Alt-up>", desc = "resize -5"
-    "<Alt-down>", desc = "resize +5"
+    "<up>", desc = "resize -5"
+    "<down>", desc = "resize +5"
 
 -- Indenting in visual mode
     ">", desc = "after tab in re-select the same"
@@ -43,12 +43,25 @@
     "<Space>k", desc = "Move 10 lines up"
 
 -- Git Fugitive
-   "<Space>gg", desc = "You open Fugitive and see all the files"
-   -- Inside Fugitive
-   "-", desc = "Add files to staged"
-   "=", desc = "View the changes made to the files"
-   "cc", desc = "Add a commit" (You write it, save it, and close it.)
-   "P", desc = "does a git push"
+    "<Space>gg", desc = "You open Fugitive and see all the files"
+    -- Inside Fugitive
+    "-", desc = "Add files to staged"
+    "=", desc = "View the changes made to the files"
+    "cc", desc = "Add a commit" (You write it, save it, and close it.)
+    "P", desc = "does a git push"
+
+-- Multicursor
+    "<Alt-up>", desc = "starts multiple cursors upwards"
+    "<Alt-down>" desc = "starts multiple cursors downwards"
+
+    "<Space><up>", desc = "Skip up one line"
+    "<Space><down>", desc = "Skip a line down"
+
+    -- Add or skip adding a new cursor by matching word/selection
+    "<Space>n", desc = "Place a cursor at the next word match downwards."
+    "<Space>s", desc = "It skips a word when placing cursors word-by-word"
+    "<Space>N", desc = "Place a cursor at the next upward occurrence of the word"
+    "<Space>S", desc = "It skips a word when moving the cursor word-by-word upwards"
 
 -- Telescope
     "<Space>gf", desc = "Telescope Git Files",
