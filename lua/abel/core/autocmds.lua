@@ -45,7 +45,7 @@ local function float_file(filepath)
         height = height,
         border = "rounded",
         -- title = " " .. vim.fn.fnamemodify(filepath, ":t") .. " ",
-        title = "Utils Commands",
+        title = " Commands ",
         title_pos = "center",
     })
 

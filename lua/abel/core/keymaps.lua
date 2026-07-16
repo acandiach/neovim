@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 local map = vim.keymap.set
 
 -- Open commands helper
-map("n", "<leader>hh", "<cmd>FloatFile ~/.config/nvim/lua/abel/core/helper_commands.lua<cr>")
+map("n", "<leader>hh", "<cmd>FloatFile ~/.config/nvim/lua/abel/core/help_commands.lua<cr>")
 
 -- Basic Configuration
 map("i", "jk", "<Esc><Esc>")
