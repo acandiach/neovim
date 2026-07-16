@@ -31,8 +31,8 @@
 -- Resize windows with arrows keys
     "<right>", desc = "vertical resize -5"
     "<left>", desc = "vertical resize +5"
-    "<up>", desc = "resize -5"
-    "<down>", desc = "resize +5"
+    "<Alt-up>", desc = "resize -5"
+    "<Alt-down>", desc = "resize +5"
 
 -- Indenting in visual mode
     ">", desc = "after tab in re-select the same"
@@ -43,8 +43,12 @@
     "<Space>k", desc = "Move 10 lines up"
 
 -- Git Fugitive
-    "<Space>ga", desc = "Git fetch",
-    "<Space>gl", desc = "Git pull",
+   "<Space>gg", desc = "You open Fugitive and see all the files"
+   -- Inside Fugitive
+   "-", desc = "Add files to staged"
+   "=", desc = "View the changes made to the files"
+   "cc", desc = "Add a commit" (You write it, save it, and close it.)
+   "P", desc = "does a git push"
 
 -- Telescope
     "<Space>gf", desc = "Telescope Git Files",

@@ -47,10 +47,10 @@ map("n", "<left>", "<nop>", { silent = true })
 map("n", "<right>", "<nop>", { silent = true })
 
 -- Resize windows with arrows keys
--- map("n", "<right>", ":vertical resize -5<CR>")
--- map("n", "<left>", ":vertical resize +5<CR>")
--- map("n", "<up>", ":resize -5<CR>")
--- map("n", "<down>", ":resize +5<CR>")
+map("n", "<right>", ":vertical resize -5<CR>")
+map("n", "<left>", ":vertical resize +5<CR>")
+map("n", "<A-up>", ":resize -5<CR>")
+map("n", "<A-down>", ":resize +5<CR>")
 
 -- Indenting in visual mode
 map('v', '>', '>gv', { desc = "after tab in re-select the same"})
