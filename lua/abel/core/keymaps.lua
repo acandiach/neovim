@@ -14,13 +14,13 @@ map("n", "<leader>w", "<cmd>w<cr>")
 -- map("n", "<leader>e", "<cmd>Explore<cr>")
 
 -- To Navigate between buffer and close buffer
-map("n", "<leader>bn", "<cmd>bn<cr>", {desc = "Buffer Next"})
-map("n", "<leader>bp", "<cmd>bp<cr>", {desc = "Buffer Previous"})
-map("n", "<leader>bd", "<cmd>bd<cr>", {desc = "Buffer Delete"})
+map("n", "<leader>bn", "<cmd>bn<cr>", { desc = "Buffer Next" })
+map("n", "<leader>bp", "<cmd>bp<cr>", { desc = "Buffer Previous" })
+map("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Buffer Delete" })
 
 -- mantiene el texto resaltado en el centro del editor
-map('n', 'n', 'nzzzv', { desc = "Goes to the next result on the seach and put the cursor in the middle"})
-map('n', 'N', 'Nzzzv', { desc = "Goes to the prev result on the seach and put the cursor in the middle"})
+map("n", "n", "nzzzv", { desc = "Goes to the next result on the seach and put the cursor in the middle" })
+map("n", "N", "Nzzzv", { desc = "Goes to the prev result on the seach and put the cursor in the middle" })
 
 -- Move text up and down normal mode
 map("n", "<A-j>", "<Esc>:m .+1<CR>==")
@@ -53,11 +53,11 @@ map("n", "<up>", ":resize -5<CR>")
 map("n", "<down>", ":resize +5<CR>")
 
 -- Indenting in visual mode
-map('v', '>', '>gv', { desc = "after tab in re-select the same"})
-map('v', '<', '<gv', { desc = "after tab out re-select the same"})
+map("v", ">", ">gv", { desc = "after tab in re-select the same" })
+map("v", "<", "<gv", { desc = "after tab out re-select the same" })
 
-map('n', 'n', 'nzzzv', { desc = "Goes to the next result on the seach and put the cursor in the middle"})
-map('n', 'N', 'Nzzzv', { desc = "Goes to the prev result on the seach and put the cursor in the middle"})
+map("n", "n", "nzzzv", { desc = "Goes to the next result on the seach and put the cursor in the middle" })
+map("n", "N", "Nzzzv", { desc = "Goes to the prev result on the seach and put the cursor in the middle" })
 
 -- Faster Scrolling
 map("n", "<leader>j", "10j")
@@ -65,41 +65,41 @@ map("n", "<leader>k", "10k")
 
 -- Runner current file
 local runners = {
-  python = "python3 %",
-  javascript = "node %",
-  typescript = "bun %",
-  sh = "bash %",
-  lua = "lua %",
-  rust = "cargo run",
-  c = "gcc % -o /tmp/nvim_run && /tmp/nvim_run",
-  cpp = "g++ % -std=c++20 -o /tmp/nvim_run && /tmp/nvim_run",
-  java = "javac % && java %:r",
+	python = "python3 %",
+	javascript = "node %",
+	typescript = "bun %",
+	sh = "bash %",
+	lua = "lua %",
+	rust = "cargo run",
+	c = "gcc % -o /tmp/nvim_run && /tmp/nvim_run",
+	cpp = "g++ % -std=c++20 -o /tmp/nvim_run && /tmp/nvim_run",
+	java = "javac % && java %:r",
 }
 
 function RunCurrentFile()
-  local ft = vim.bo.filetype
-  local cmd = runners[ft]
+	local ft = vim.bo.filetype
+	local cmd = runners[ft]
 
-  if not cmd then
-    vim.notify("No hay runner para: " .. ft)
-    return
-  end
+	if not cmd then
+		vim.notify("No hay runner para: " .. ft)
+		return
+	end
 
-  vim.cmd("belowright 15split")
-  vim.cmd("terminal " .. cmd)
+	vim.cmd("belowright 15split")
+	vim.cmd("terminal " .. cmd)
 
-  -- Entrar al terminal
-  vim.cmd("startinsert")
+	-- Entrar al terminal
+	vim.cmd("startinsert")
 
-  -- q para cerrar la ventana del terminal
-  vim.keymap.set("n", "q", "<cmd>close<CR>", {
-    buffer = 0,
-    silent = true,
-  })
+	-- q para cerrar la ventana del terminal
+	vim.keymap.set("n", "q", "<cmd>close<CR>", {
+		buffer = 0,
+		silent = true,
+	})
 end
 
 vim.keymap.set("n", "<leader><leader>r", RunCurrentFile, {
-  desc = "Run current file",
+	desc = "Run current file",
 })
 
 -- For multicursor
