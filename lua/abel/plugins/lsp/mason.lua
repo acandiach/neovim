@@ -14,7 +14,7 @@ return {
 				"emmet_ls",
 				"prismals",
 				"pyright",
-				"dockerfile",
+				-- "dockerfile",
 				"eslint",
 			},
 		},
